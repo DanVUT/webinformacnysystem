@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-2"/>
+    <title>Projekt IIS</title>
+    <style type="text/css">
+    	table { border-collapse: collapse; }
+    	td, th { border: 1px solid black; padding: 0.3em 0.5em; text-align: left; }
+    	dt { font-weight: bold; margin-top: 0.5em; }
+    </style>
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/B21F4273-17E0-0045-9CC8-55C80C979916/main.js" charset="UTF-8"></script></head>
+<body>
+
+<!-- Zkontrolujte prosím nastavení kódování v hlavičce dokumentu 
+     podle použitého editoru -->
+
+<h1>Název zadání (editujte)</h1> <!-- Nahradte názvem svého zadání -->
+
+<dl>
+	<dt>Autoři</dt>
+	<dd>První jméno <!-- Nahraďte skutečným jménem a e-mailem autora a popisem činnosti -->
+	    <a href="mailto:xgrnac00@stud.fit.vutbr.cz">xgrnac00@stud.fit.vutbr.cz</a> -
+		správa uživatelů a uživatelské rozhraní
+	</dd>
+	<dd>Druhé jméno <!-- Nahraďte skutečným jménem a e-mailem autora a popisem činnosti -->
+	    <a href="mailto:xflore02@stud.fit.vutbr.cz">xflore02@stud.fit.vutbr.cz</a> - 
+		databázový subsystém
+	</dd>
+	<dt>URL aplikace</dt>
+	<dd><a href="http://www.stud.fit.vutbr.cz/~xflore02/IIS">http://www.stud.fit.vutbr.cz/~xflore02/IIS</a></dd>
+</dl>
+
+<h2>Uživatelé systému pro testování</h2>
+<table>
+<tr><th>Login</th><th>Heslo</th><th>Role</th></tr>
+<tr><td>reference</td><td>reference</td><td>Použivatel</td></tr>
+<tr><td>admin</td><td>Catbook123</td><td>Administrátor</td></tr>
+</table>
+
+<h2>Implementace</h2>
+<p>Počiatočná stránka je prihlasovací formulár pomocou ktorého sa môžeme prihlásiť alebo sa môžeme dostať k registračnému formuláru. V prípade, že sa chceme prihlásiť tak po vyplnení údajov sa zavolá skript verificate.php ktorý skontroluje prihlasovacie údaje používateľa v databáze. V prípade, že sú správne, pustí ho na welcome.php stránku, v prípade, že sú nesprávne, presmeruje ho späť na prihlasovací formulár s chybovou hláškou. Pre jednoduchosť implementácie sú prihlasovacie mená a heslá nijakým spôsobom nešifrované. V skutočnom systéme by v databáze boli uložené hashe hesiel. V prípade, že sa presmerujeme na registračný formulár, vidíme jednotlivé polia ktoré musíme vyplniť. Všetky sú povinné. Po vyplnení údajov sa spustí javascript, ktorý skontroluje validitu údajov a v prípade, že nejaký údaj nie je v poriadku, tak vyhodí javascript alert. Následne sa zavolá skript newaccount.php a zapíše sa informácia o účte do SQL databázy do tabuliek cats a lives a presmeruje nás na prihlasovací formulár. Keď sa prihlásime, tak sa dostaneme na prvú stránku welcome.php ktorá obsahuje novinky zo systému. Zobrazujú sa tu novinky ktoré sú novšie ako 7 dní. Zobrazujú sa tu novinky o nových možných vlastníkoch mačiek. O nových predmetoch v systéme ktoré si môžu mačky zabrať a takisto nové teritória ktoré môžu zabrať. Tieto informácie sa nachádzajú v tabuľke news. Ako ďalšiu možnosť v menu máme profile. Tá nás zoberie na profil mačky kde sú zhrnuté údaje z tabuliek cats,owners a races. Ďalej si tu môže užívateľ zmeniť svojho majiteľa. Ako ďalšiu možnosť tu sú teritória (territories.php). Tu môžeme hore vidieť dropdown menu a tlačítko na potvrdenie. Dropdown menu obsahuje všetky dostupné teritóriá, ktoré sú v systéme. Pod ňou sa nachádza tabuľka aktívne okupovaných teritórií. Kde v stĺpci napravo môžeme zaškrtnúť checkbox ktoré teritórium chce používateľ opustiť. Zavolá sa skript editterritories.php kde sa zaznamená u zaškrtnutých okupácií že ich mačka opustila. Pod touto tabuľkou je tabuľka okupovaných teritórií a dátumy od kedy do kedy boli okupované. Ďalej je tu záložka property (properties.php) kde sú uchované informácie o majetku mačiek. Na vrchu stránky máme zase formulár o vytvorení informácie o novom majetku. Tu si užívateľ musí vybrať aký majetok má v akom teritóriu. A vybrať počet kusov. Zavolá sa skript newproperty.php ktorý vytvorí záznam o novom vlastníctve. Rovnako ako v predchádzajúcom prípade s teritóriámi môžeme pomocou checkboxu vybrať vlastníctva ktoré chceme zahodiť. A zavolá sa skript editproperties.php ktorý doplní dátum ukončenia vlastníctva čím sa zahodí. Tu si však musíme dať pozor, pretože v záložke "LOANS" môžeme vlastníctvo prepožičať vlastníkovi mačky, ale keď je dané vlastníctvo prepožičané, nemôžeme ho zahodiť. Musíme ho najskôr od majiteľa zobrať a až potom ho môžeme zahodiť. Ďalšia záložka je LOANS kde môžeme z množiny vlastníctiev vybrať tie, ktoré chceme prepožičať majiteľovi. Skript newlease.php . A v spodnej tabuľke môžeme prepožičané predmety od majiteľa znovu zobrať. Posledná záložka v menu je "LIVES" kde sú životy mačky pri poslednom (momentálnom) živote si môže vybrať kde umrela a dôvod jej smrti. Následne sa zavolá newlife.php ktorá k momentálnemu životu pridá dátum úmrtia a vytvorí ďalší život, kde miesto narodenia je miesto úmrtia predchádzajúceho života. 9 životov je maximálny počet. Keď sa prihlásime do systému ako administrátor môžeme pridávať a odoberať rôzne veci do systému a zo systému ako užívateľov, rasy, vlastníkov mačiek, predmety, teritóriá a tak podobne. Všetky skripty sú obsiahnuté v priečinku SUPERUSER. Niektoré zmeny, ktoré prevedie admin sa ukladajú do noviniek pre používateľov.</p>
+
+<h2>Instalace</h2>
+<ul>
+<li>Stranka nevyužíva nijaké frameworky</li>
+<li>Využíva PHP5 a MySQL</li>
+<li>Pre vzhľad HTML a CSS</li>
+<li>Priložené SQL dostane databázu do fáze s referenčným stavom</li>
+</ul>
+
+<h2>Známé problémy</h2>
+<p>Horšie spracované administrátorské menu. Nesmú sa mazať prvky, ktoré už boli používané používateľmi, pretože to rozbije konzistenciu dát. Môžu sa iba mazať dáta ktoré neboli používané napr keď admin urobil preklep. Niektoré funkcie chýbajú napr. odstránenie rasy, pridanie farieb a patentov mačiek . Všetky problémy a nedostatky sú spôsobené nedostatkom času. Nestíhame ITU.</p>
+
+</body>
+</html>

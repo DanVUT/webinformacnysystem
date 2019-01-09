@@ -1,0 +1,120 @@
+#catinfo{
+    list-style-type: none;
+    position: absolute;
+    width: 20vw;
+    height: 30%;
+    left: 36vw;
+    top: 4.5vw;
+    height: 40vh;
+    font-family: "Abel";
+    text-align: center;
+    font-size: x-large;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+#catinfo li{
+    display: block;
+    height: 24.5%;
+    background-color: #FFE365;
+    width:100%;
+}
+#catinfo li a{
+    position: relative;
+    top: 30%;
+}
+#ownerinfo{
+    list-style-type: none;
+    position: absolute;
+    width: 20vw;
+    height: 40vh;
+    left: 14.3vw;
+    height: 46vh;
+    top: 52vh;
+    font-family: "Abel";
+    text-align: center;
+    font-size: x-large;
+    margin: 0;
+    padding: 0;
+}
+
+
+#ownerinfo li{
+    display: block;
+    height: 15%;
+    background-color: rgb(91, 245, 73);
+    width:100%; 
+}
+
+#ownerinfo li a{
+    position: relative;
+    top: 30%;
+}
+#raceinfo{
+    list-style-type: none;
+    position: absolute;
+    top: 49.5vh;
+    width: 20vw;
+    height: 41.5vh;
+    left: 34vw;
+    font-family: "Abel";
+    font-size: x-large;
+    text-align: center;
+    
+}
+
+
+#raceinfo li{
+    display: block;
+    height: 25%;
+    background-color : #43A9E4;
+}
+
+#raceinfo a{
+    position: relative;
+    top: 30%;
+}
+
+button{
+    float: right;
+    top: 20%;
+    position: relative;
+}
+
+img{
+    position: relative;
+    left: 14%;
+    float: left;
+    top: 8vh;
+    border-radius: 20px;
+    width: 20vw;
+    height: 40vh;
+}
+
+
+#need{
+    position: absolute;
+    right: 9vw;
+    top:25vh;
+    font-size: 3.3vw;
+}
+
+select{
+    position: absolute;
+    font-family: "Abel";
+    top: 35vh;
+    right: 14vw;
+    width: 15vw;
+    font-size: xx-large;
+}
+
+#button{
+    position: absolute;
+    font-family: "Abel";
+    top: 40vh;
+    right: 14vw;
+    width: 15vw;
+    font-size: xx-large;
+}

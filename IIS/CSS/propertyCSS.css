@@ -1,0 +1,74 @@
+.newProperty{
+    position: relative;
+    width: 50%;
+    left: 14%;
+    top: 8vh;
+}
+
+
+.currentProperties{
+    position: relative;
+    width: 78%;
+    left: 14%;
+    top: 9vh;
+    border: 0;
+    border-collapse: collapse;
+    text-align: center;
+    font-family: "Abel";
+    font-size: x-large;
+}
+
+.currentProperties th{
+    background-color: rgba(87, 219, 120, 0.88);
+}
+#r1{
+    background-color: rgb(252, 227, 87);
+}
+
+#r2{
+    background-color: white;
+}
+
+
+.subform{
+    position: relative;
+    left: 50%;
+    top: 10vh;
+}
+
+.historyProperties{
+    position: relative;
+    width: 78%;
+    left: 14%;
+    top: 12vh;
+    border: 0;
+    border-collapse: collapse;
+    text-align: center;
+    font-family: "Abel";
+    font-size: x-large;
+}
+
+.historyProperties th{
+    background-color: #FA6565;
+}
+
+select{
+    font-family: "Abel";
+    font-size: x-large;
+}
+
+input{
+    font-family: "Abel";
+    font-size: x-large;
+}
+
+#error{
+    font-family: "Abel";
+    font-size: x-large;
+    text-align: center;
+    position: relative;
+    width: 40%;
+    left: 14%;
+    top: 8vh;
+    background-color: red; 
+}

@@ -1,0 +1,69 @@
+.newterritory{
+    position: relative;
+    width: 35vw;
+    top: 10vh;
+}
+
+.newitem{
+    position: relative;
+    top: 12vh;
+    width: 30vw;
+}
+
+.deleteTerritory{
+    position: relative;
+    top: 14vh;
+    width: 30vw;
+}
+
+.deleteItem{
+    position: relative;
+    top: 16vh;
+    width: 30vw;
+}
+
+.deleteOwner{
+    position: relative;
+    top: 18vh;
+    width: 30vw;
+}
+
+.deleteUser{
+    position: relative;
+    top: 20vh;
+    width: 30vw
+}
+
+.deleteNews{
+    position: relative;
+    top: 22vh;
+    width: 30vw;
+}
+
+.newOwner{
+    position: absolute;
+    float: left;
+    top: 11vh;
+    left: 40vw;
+    width: 20vw;
+    padding-right: 1vw;
+}
+.newRace{
+    position: absolute;
+    float: left;
+    top: 11vh;
+    width: 20%;
+    left: 55vw;
+}
+
+
+
+select{
+    font-family: "Abel";
+    font-size: x-large;
+}
+
+input{
+    font-family: "Abel";
+    font-size: x-large;
+}

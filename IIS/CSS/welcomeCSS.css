@@ -1,0 +1,114 @@
+body{
+    background-image: url("background.jpg");
+}
+
+.upperpanel{
+    position: fixed;
+    width: 100%;
+    top:0%;
+    left:0;
+    height: 7%;
+    background-image: url("background2.jpg");
+    z-index: 1;
+}
+
+.catbook{
+    position: absolute;
+    background-color: #00B7FF;
+    height: 90%;
+    top: 5%;
+    left: 0.5%;
+    width: 12%;
+    text-align: center;
+    border-radius: 25px;
+}
+
+#pagename {
+    position: absolute;
+    left: 7%;
+    top: -15%;
+    font-family: 'lobster';
+    font-size: 3.3vw;
+    white-space: normal;
+    color: white;
+
+}
+
+#cat{
+    position: absolute;
+    left: 23%;
+    top: 20%;
+    font-size: x-large;
+    font-family: 'lobster';
+}
+
+.logout{
+    position: relative;
+    float: right;
+    right: 0.5%;
+    height: 100%;
+    width: 12%;
+    top: 4%;
+}
+
+#logoutbutton{
+    text-align: center;
+    height: 90%;
+    width: 100%;
+    border-radius: 20px;
+    font-family: "Abel";
+    font-size: xx-large;
+    background-color: #DFDFDF;
+}
+@media screen and (max-width: 600px) {
+    #cat {
+      font-size: 30px;
+    }
+}
+
+.menu{
+    position:fixed;
+    background-color: grey;
+    left:0%;
+    top:7%;
+    width:13%;
+    height: 100vh;
+    border-right: solid #00FFC8;
+    z-index: 1;
+}
+
+.menu ul{
+    position: absolute;
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li{
+    height: 3vw;
+    text-align: center;
+}
+
+#selected{
+    background-color: #00FFC8;
+}
+
+#selected a{
+    color: grey;
+}
+
+.menu li:hover{
+    background-color: #2C2C2C;
+}
+
+
+.menu a{
+    position: relative;
+    font-family: "Abel";
+    font-size: x-large;
+    top: 20%;
+    text-align: center;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.92);
+}

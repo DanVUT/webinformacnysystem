@@ -1,0 +1,89 @@
+body{
+    overflow-x: hidden;
+}
+
+.currentTerritories{
+    position: relative;
+    width: 80%;
+    left: 14%;
+    top: 10vh;
+    border:none;
+    font-family: "abel";
+    font-size: x-large;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+}
+.currentTerritories td{
+    text-align: center;
+    border: 0;
+}
+.currentTerritories th{
+    border:0;
+}
+.currentTerritories th{
+    background-color: rgba(87, 219, 120, 0.88);
+}
+#r1{
+    background-color: rgb(252, 227, 87);
+}
+
+#r2{
+    background-color: white;
+}
+
+.subform{
+    position: relative;
+    top: 12vh;
+    left: 50%;
+    font-family: "abel";
+    text-align: center;
+    font-size: x-large;
+
+}
+
+.historyTerritories{
+    position: relative;
+    width: 80%;
+    left: 14%;
+    top: 18vh;
+    border: 0;
+    border-collapse: collapse;
+}
+
+.historyTerritories th{
+    background-color: #FA6565;
+}
+
+.historyTerritories{
+    font-family: "abel";
+    text-align: center;
+    font-size: x-large;
+}
+
+.newOccupation{
+    position: relative;
+    left: 14%;
+    top: 9vh;
+}
+
+#territory{
+    font-family: "abel";
+    font-size: x-large;
+}
+
+#newOccupationButton{
+    font-family: "abel";
+    font-size: x-large;
+}
+
+#error{
+    position: relative;
+    left: 14%;
+    top: 8vh;
+    width: 20%;
+    font-family: "Abel";
+    font-size: x-large;
+    background-color: red;
+    text-align: center;
+}

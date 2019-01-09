@@ -1,0 +1,41 @@
+
+.lives{
+    position: relative;
+    width: 78%;
+    left: 14%;
+    top: 10vh;
+    border: 0;
+    border-collapse: collapse;
+    text-align: center;
+    font-family: "Abel";
+    font-size: x-large;
+}
+
+#deadTerritory{
+    position: relative;
+    top: 1.2vh;
+}
+
+.lives th{
+    background-color: rgba(87, 219, 120, 0.88);
+}
+
+#r1{
+    background-color: rgb(252, 227, 87);
+}
+
+#r2{
+    background-color: white;
+}
+
+#button{
+    text-align: center;
+    font-family: "Abel";
+    font-size: medium;
+}
+
+#deadTerritory{
+    text-align: center;
+    font-family: "Abel";
+    font-size: large;
+}

@@ -1,0 +1,87 @@
+body {
+    background-image:url("background.jpg");
+    background-size: cover;
+}
+
+.error{
+    position: absolute;
+    left: 40.9vw;
+    top: 20%;
+    background-color: rgba(255, 0, 0, 0.99);
+    height: 50px;
+}
+
+.login{
+    position: relative;
+    width: 20%;
+    height: 25%;
+    top: 27%;
+    left: 38%;
+    background: rgba(2, 2, 2, 0.4);
+    border-radius: 20px;
+}
+
+
+.user{
+    height: 50px;
+    width:80%;
+    position: absolute;
+    top: 8%;
+    left: 8%;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    background: transparent;
+    padding: 4px;
+    margin: 5px;
+    color: #fff;
+}
+.user::-webkit-input-placeholder{
+    color:#fff;
+}
+
+.pass{
+    position: absolute;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    width:80%;
+    background: transparent;
+    padding: 4px;
+    left: 8%;
+    top: 35%;
+    margin: 5px;
+    color: #fff;
+}
+
+.pass::-webkit-input-placeholder{
+    color:#fff;
+}
+
+.formsub{
+    position: absolute;
+    left: 8%;
+    top: 60%;
+    height: 40px;
+    width:80%;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    padding: 4px;
+    margin: 5px;
+    background-color: rgb(24, 133, 0);
+}
+
+
+
+.formsub:hover {
+    opacity: 0.8;
+}
+
+.formsub:active{
+    opacity: 0.6;
+}
+
+.registermessage{
+    position: absolute;
+    left: 10%;
+    top: 77%;
+}
